@@ -684,6 +684,12 @@ function getPrintableASCII(): string {
   for (let i = 32; i <= 127; i++) {
     ascii += String.fromCharCode(i);
   }
+  ascii += "กขฃคฅฆงจฉชซฌญฎฏ"
+  ascii += "ฐฑฒณดตถทธนบปผฝพฟ"
+  ascii += "ภมยรฤลฦวศษสหฬอฮฯ"
+  ascii += "ะัาำิีึืฺุู฿"
+  ascii += "เแโใไๅๆ็่้๊๋์ํ๎๏"
+  ascii += "๐๑๒๓๔๕๖๗๘๙๚๛"
   return ascii;
 }
 
