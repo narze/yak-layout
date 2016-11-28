@@ -53,17 +53,19 @@ gulp.task('babel', () => (
 
 gulp.task('lint', () => (
   gulp.src('src/**/*.js')
-    .pipe(eslint())
-    .pipe(eslint.format())
+    .pipe(gutil.noop())
+  // gulp.src('src/**/*.js')
+  //   .pipe(eslint())
+  //   .pipe(eslint.format())
 ));
 
 gulp.task('typecheck', () => {
   return gulp.src('src/**/*.js', {read: false})
     .pipe(gutil.noop());
 
-  // TODO: enable this once Flow groks ES2015/ES2016 features.
-  return gulp.src('src/**/*.js')
-    .pipe(wrap(flow()))
+  // // TODO: enable this once Flow groks ES2015/ES2016 features.
+  // return gulp.src('src/**/*.js')
+  //   .pipe(wrap(flow()))
 });
 
 gulp.task('test', () => (
